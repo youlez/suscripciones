@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Nexus – Planes de suscripción</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="card.css">
+</head>
+
+<body>
+
+<header class="nexus-header">
+  <div class="header-wrap">
+
+    <div class="brand">
+      <img src="img/logo.png" alt="Librería Nexus">
+      <span>Librería Nexus</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#">Inicio</a>
+      <a href="#">Catálogo</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="page-content">
+
+  <h1 class="title">Planes de suscripción Nexus</h1>
+
+  <div class="intro">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="container">
+
+    <section class="cards">
+
+     <article class="card" tabindex="0"
+       data-books="3"
+       data-days="15"
+       data-quality="Media"
+       data-format="EPUB">
+
+  <div class="card-body">
+    <h3>Plan Lector</h3>
+    <p>Lectura ocasional en Nexus.</p>
+  </div>
+
+  <span class="action">Seleccionar</span>
+
+</article>
+
+     <article class="card" tabindex="0"
+       data-books="8"
+       data-days="30"
+       data-quality="Alta"
+       data-format="EPUB / PDF">
+
+  <div class="card-body">
+    <h3>Plan Plus</h3>
+    <p>Ideal para estudio y coworking.</p>
+  </div>
+
+  <span class="action">Seleccionar</span>
+
+</article>
+
+      <article class="card" tabindex="0"
+       data-books="15"
+       data-days="60"
+       data-quality="Ultra"
+       data-format="EPUB / PDF">
+
+  <div class="card-body">
+    <h3>Plan Pro</h3>
+    <p>Acceso total a la librería Nexus.</p>
+  </div>
+
+  <span class="action">Seleccionar</span>
+
+</article>
+
+    </section>
+
+    <section class="summary">
+
+      <div class="item">
+        <p>Libros al mes</p>
+        <span id="books" class="value">0</span>
+      </div>
+
+      <div class="item">
+        <p>Días de descarga</p>
+        <span id="days" class="value">0</span>
+      </div>
+
+      <div class="item">
+        <p>Calidad imágenes</p>
+        <span id="quality" class="value">-</span>
+      </div>
+
+      <div class="item">
+        <p>Formato</p>
+        <span id="format" class="value">-</span>
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+<footer class="nexus-footer">
+
+  <div class="footer-grid">
+
+    <div>
+      <h4>Librería Nexus</h4>
+      <p>El conocimiento a tu alcance.</p>
+      <p><strong>Dirección:</strong> Calle 21 #45-17, Aranjuez</p>
+      <p><strong>Horario:</strong> Lunes a Sábado<br>9:00am – 6:00pm</p>
+    </div>
+
+    <div>
+      <h4>Contacto</h4>
+      <p>Email: info@nexus.com</p>
+      <p>Teléfono: +57 310 555 8899</p>
+    </div>
+
+    <div>
+      <h4>Síguenos</h4>
+      <a href="#">Instagram</a><br>
+      <a href="#">Facebook</a><br>
+      <a href="#">Twitter</a>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <a href="#">Aviso legal</a><br>
+      <a href="#">Política de privacidad</a><br>
+      <a href="#">Términos y condiciones</a>
+    </div>
+
+  </div>
+
+  <div class="footer-copy">
+    © 2026 Nexus Librería — Todos los derechos reservados.
+  </div>
+
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+const booksEl  = document.getElementById('books');
+const daysEl   = document.getElementById('days');
+const qualityEl= document.getElementById('quality');
+const formatEl = document.getElementById('format');
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+
+    cards.forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+
+    booksEl.textContent   = card.dataset.books;
+    daysEl.textContent    = card.dataset.days;
+    qualityEl.textContent = card.dataset.quality;
+    formatEl.textContent  = card.dataset.format;
+
+    const summary = document.querySelector('.summary');
+    summary.classList.remove('animate');
+    void summary.offsetWidth;
+    summary.classList.add('animate');
+
+  });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="timeline.js"></script>
+
+</body>
+</html>
