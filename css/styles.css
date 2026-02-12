@@ -1,0 +1,43 @@
+:root {
+  --c-1: #00b6ef;
+  --c-2: #00a7bd;
+  --c-3: #008ad3;
+  --c-4: #008cd7;
+  --bg: #ffffff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --soft: #dcebff;
+  --transition-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+.page-content {
+  padding: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s var(--transition-ease) 0.3s forwards;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

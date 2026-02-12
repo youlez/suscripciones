@@ -1,190 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Nexus – Planes de suscripción</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus – Planes de suscripción</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/intro.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/summary.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="card.css">
-</head>
+  <body>
+    <header class="nexus-header">
+      <div class="header-wrap">
+        <div class="brand">
+          <img src="img/logo.png" alt="Librería Nexus" />
+          <span>Librería Nexus</span>
+        </div>
+        <nav class="nav">
+          <a
+            href="#"
+            class="animate__animated animate__fadeIn animate__delay-1s"
+            >Suscripción</a
+          >
+        </nav>
+      </div>
+    </header>
 
-<body>
+    <main class="page-content">
+      <h1 class="title animate__animated animate__fadeInDown">
+        Planes de suscripción Nexus
+      </h1>
 
-<header class="nexus-header">
-  <div class="header-wrap">
-
-    <div class="brand">
-      <img src="img/logo.png" alt="Librería Nexus">
-      <span>Librería Nexus</span>
-    </div>
-
-    <nav class="nav">
-      <a href="#">suscripción</a>
-    </nav>
-
-  </div>
-</header>
-
-<main class="page-content">
-
-  <h1 class="title">Planes de suscripción Nexus</h1>
-
-  <div class="intro">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-
-  <div class="section-divider"></div>
-
-  <div class="container">
-
-    <section class="cards">
-
-     <article class="card" tabindex="0"
-       data-books="3"
-       data-days="15"
-       data-quality="Media"
-       data-format="EPUB">
-
-  <div class="card-body">
-    <h3>Plan Lector</h3>
-    <p>Lectura ocasional en Nexus.</p>
-  </div>
-
-  <span class="action">Seleccionar</span>
-
-</article>
-
-     <article class="card" tabindex="0"
-       data-books="8"
-       data-days="30"
-       data-quality="Alta"
-       data-format="EPUB / PDF">
-
-  <div class="card-body">
-    <h3>Plan Plus</h3>
-    <p>Ideal para estudio y coworking.</p>
-  </div>
-
-  <span class="action">Seleccionar</span>
-
-</article>
-
-      <article class="card" tabindex="0"
-       data-books="15"
-       data-days="60"
-       data-quality="Ultra"
-       data-format="EPUB / PDF">
-
-  <div class="card-body">
-    <h3>Plan Pro</h3>
-    <p>Acceso total a la librería Nexus.</p>
-  </div>
-
-  <span class="action">Seleccionar</span>
-
-</article>
-
-    </section>
-
-    <section class="summary">
-
-      <div class="item">
-        <p>Libros al mes</p>
-        <span id="books" class="value">0</span>
+      <div class="intro">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
 
-      <div class="item">
-        <p>Días de descarga</p>
-        <span id="days" class="value">0</span>
+      <div class="section-divider"></div>
+
+      <div class="container">
+        <section class="cards">
+          <article
+            class="card"
+            tabindex="0"
+            data-books="3"
+            data-days="15"
+            data-quality="Media"
+            data-format="EPUB"
+          >
+            <div class="card-body">
+              <h3>Plan Lector</h3>
+              <p>
+                Lectura ocasional en Nexus. Perfecto para descubrir nuevas
+                historias.
+              </p>
+            </div>
+            <span class="action">Seleccionar</span>
+          </article>
+
+          <article
+            class="card"
+            tabindex="0"
+            data-books="8"
+            data-days="30"
+            data-quality="Alta"
+            data-format="EPUB / PDF"
+          >
+            <div class="card-body">
+              <h3>Plan Plus</h3>
+              <p>
+                Ideal para estudio y coworking. Accede a más contenido cada mes.
+              </p>
+            </div>
+            <span class="action">Seleccionar</span>
+          </article>
+
+          <article
+            class="card"
+            tabindex="0"
+            data-books="15"
+            data-days="60"
+            data-quality="Ultra"
+            data-format="EPUB / PDF"
+          >
+            <div class="card-body">
+              <h3>Plan Pro</h3>
+              <p>
+                Acceso total a la librería Nexus. Tu conocimiento sin límites.
+              </p>
+            </div>
+            <span class="action">Seleccionar</span>
+          </article>
+        </section>
+
+        <section class="summary-container">
+          <div class="summary-front">
+            <div class="item">
+              <p>Libros al mes</p>
+              <span id="books" class="value">0</span>
+              <div class="progress-container">
+                <div id="books-bar" class="progress-bar"></div>
+              </div>
+            </div>
+            <div class="item">
+              <p>Días de descarga</p>
+              <span id="days" class="value">0</span>
+              <div class="progress-container">
+                <div id="days-bar" class="progress-bar"></div>
+              </div>
+            </div>
+            <div class="item">
+              <p>Calidad imágenes</p>
+              <span id="quality" class="value">-</span>
+            </div>
+            <div class="item">
+              <p>Formato</p>
+              <span id="format" class="value">-</span>
+            </div>
+            <div class="div-btn">
+              <button id="flip-summary-btn" class="view-more-btn">
+                Más Información
+              </button>
+            </div>
+          </div>
+
+          <div class="summary-back">
+            <div class="details">
+              <h3>Detalles del Plan</h3>
+              <ul class="details-list" id="plan-details"></ul>
+            </div>
+            <button id="flip-back-btn" class="view-more-btn">Volver</button>
+          </div>
+        </section>
       </div>
+    </main>
 
-      <div class="item">
-        <p>Calidad imágenes</p>
-        <span id="quality" class="value">-</span>
+    <footer class="nexus-footer">
+      <div class="footer-grid">
+        <div>
+          <h4>Librería Nexus</h4>
+          <p>El conocimiento a tu alcance.</p>
+          <p><strong>Dirección:</strong> Calle 21 #45-17, Aranjuez</p>
+          <p><strong>Horario:</strong> Lunes a Sábado<br />9:00am – 6:00pm</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <p>Email: info@nexus.com</p>
+          <p>Teléfono: +57 310 555 8899</p>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <a href="#">Instagram</a><br /><a href="#">Facebook</a><br /><a
+            href="#"
+            >Twitter</a
+          >
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="#">Aviso legal</a><br /><a href="#">Política de privacidad</a
+          ><br /><a href="#">Términos y condiciones</a>
+        </div>
       </div>
-
-      <div class="item">
-        <p>Formato</p>
-        <span id="format" class="value">-</span>
+      <div class="footer-copy">
+        © 2026 Nexus Librería — Todos los derechos reservados.
       </div>
+    </footer>
 
-    </section>
-
-  </div>
-
-</main>
-
-<footer class="nexus-footer">
-
-  <div class="footer-grid">
-
-    <div>
-      <h4>Librería Nexus</h4>
-      <p>El conocimiento a tu alcance.</p>
-      <p><strong>Dirección:</strong> Calle 21 #45-17, Aranjuez</p>
-      <p><strong>Horario:</strong> Lunes a Sábado<br>9:00am – 6:00pm</p>
-    </div>
-
-    <div>
-      <h4>Contacto</h4>
-      <p>Email: info@nexus.com</p>
-      <p>Teléfono: +57 310 555 8899</p>
-    </div>
-
-    <div>
-      <h4>Síguenos</h4>
-      <a href="#">Instagram</a><br>
-      <a href="#">Facebook</a><br>
-      <a href="#">Twitter</a>
-    </div>
-
-    <div>
-      <h4>Legal</h4>
-      <a href="#">Aviso legal</a><br>
-      <a href="#">Política de privacidad</a><br>
-      <a href="#">Términos y condiciones</a>
-    </div>
-
-  </div>
-
-  <div class="footer-copy">
-    © 2026 Nexus Librería — Todos los derechos reservados.
-  </div>
-
-</footer>
-
-<script>
-const cards = document.querySelectorAll('.card');
-
-const booksEl  = document.getElementById('books');
-const daysEl   = document.getElementById('days');
-const qualityEl= document.getElementById('quality');
-const formatEl = document.getElementById('format');
-
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-
-    cards.forEach(c => c.classList.remove('active'));
-    card.classList.add('active');
-
-    booksEl.textContent   = card.dataset.books;
-    daysEl.textContent    = card.dataset.days;
-    qualityEl.textContent = card.dataset.quality;
-    formatEl.textContent  = card.dataset.format;
-
-    const summary = document.querySelector('.summary');
-    summary.classList.remove('animate');
-    void summary.offsetWidth;
-    summary.classList.add('animate');
-
-  });
-});
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="timeline.js"></script>
-
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/summary.js"></script>
+  </body>
 </html>

@@ -1,0 +1,83 @@
+.nexus-header {
+  background: linear-gradient(135deg, #b8ecff, #00b6ef);
+  padding: 14px 40px;
+  box-shadow: 0 4px 12px rgba(0, 138, 211, 0.15);
+  opacity: 0;
+  animation: slideInDown 0.7s var(--transition-ease) 0.2s forwards;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-wrap {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: #008ad3;
+}
+
+.brand img {
+  height: 42px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #008ad3;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #008ad3;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover:after {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .header-wrap {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav a {
+    margin: 0 10px;
+  }
+}
